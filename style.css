@@ -1,0 +1,94 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.mainContainer {
+  display: flex;
+}
+
+.karta {
+  border: 1px solid rgb(235, 229, 229);
+  border-radius: 5%;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgb(212, 210, 210);
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+/*
+.mainContainer {
+  @media (max-width: 560px) {
+    flex-direction: column;
+  }
+}*/
+
+/*pro mobil*/
+@media (max-width: 560px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .karta {
+    border: 1px solid rgb(235, 229, 229);
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px rgb(212, 210, 210);
+    text-align: center;
+    max-width: 380px;
+    margin: 10px auto;
+  }
+}
+
+/*pro tablet*/
+@media (min-width: 561px) and (max-width: 959px) {
+  .mainContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .karta {
+    border: 1px solid rgb(235, 229, 229);
+    text-align: left;
+    flex-basis: 45%;
+    
+    
+    }
+
+  img {
+    float: left;
+    margin: 0 10px;
+}
+
+  
+
+/*pro pc*/
+@media (min-width: 960px) {
+  .karta {
+    border: 1px solid rgb(235, 229, 229);
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px rgb(212, 210, 210);
+    text-align: center;
+    max-width: 380px;
+    margin: 0 10px;
+  }
+}
